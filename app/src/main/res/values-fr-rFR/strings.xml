@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="timer_switch_text" translatable="true">Chrono</string>
+    <string name="fourPlayer_button_text" translatable="true">4 joueurs</string>
+    <string name="twoPlayer_button_text" translatable="true">2  joueurs</string>
+    <string name="singlePlayer_button_text" translatable="true">1 joueur</string>
+    <string name="previous" translatable="true">Retour</string>
+    <string name="player_one">Joueur 1</string>
+    <string name="player_two">Joueur 2</string>
+    <string name="counter">Compteur</string>
+    <string name="classic_mode">Classique</string>
+    <string name="speed_duel">Speed duel</string>
+    <string name="loose_text">perd</string>
+    <string name="gain_text">gagne</string>
+</resources>

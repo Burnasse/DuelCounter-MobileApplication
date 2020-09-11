@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screenBackground"
+    tools:context=".OnePlayerMainAppFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/globalLayout_relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/centerlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp">
+
+                <ImageButton
+                    android:id="@+id/button_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/circle_button"
+                    android:src="@drawable/ic_back"
+                    android:text="@string/previous" />
+
+                <ImageButton
+                    android:id="@+id/timer_imagebutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@id/button_second"
+                    android:background="@drawable/circle_button"
+                    android:contentDescription="Timer"
+                    android:src="@drawable/ic_timer_off" />
+
+                <Chronometer
+                    android:id="@+id/chronometer_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@id/timer_imagebutton"
+                    android:textColor="@android:color/white" />
+
+                <ImageButton
+                    android:id="@+id/reset_imagebutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/chronometer_view"
+                    android:background="@drawable/circle_button"
+                    android:contentDescription="Reset"
+                    android:src="@drawable/ic_reset" />
+
+                <ImageButton
+                    android:id="@+id/tosscoin_imagebutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/reset_imagebutton"
+                    android:background="@drawable/circle_button"
+                    android:src="@drawable/ic_coinflip" />
+
+                <ImageButton
+                    android:id="@+id/history_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/tosscoin_imagebutton"
+                    android:background="@drawable/circle_button"
+                    android:src="@drawable/ic_history" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/downLayout_relativelayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/centerlayout">
+
+                <TextView
+                    android:id="@+id/playerOne_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/placeholder"
+                    android:textColor="@android:color/white"
+                    android:textSize="70sp" />
+
+                <TextView
+                    android:id="@+id/lifePlayerOnePreview_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/playerOne_textview"
+                    android:layout_centerHorizontal="true"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:visibility="invisible" />
+
+                <FrameLayout
+                    android:id="@+id/playerOne_framelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/playerOne_edittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/playerOne_textview"
+                    android:layout_centerInParent="true"
+                    android:cursorVisible="false"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPersonName"
+                    android:text="@string/player_one"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <ImageButton
+                    android:id="@+id/playerOneCalcul_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/circle_button"
+                    android:src="@drawable/ic_edit" />
+
+                <ImageButton
+                    android:id="@+id/addCounterOne_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="10dp"
+                    android:layout_toEndOf="@id/playerOneCalcul_button"
+                    android:background="@drawable/circle_button"
+                    android:src="@drawable/ic_add_counter" />
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/playerOne_textview"
+                    android:layout_centerInParent="true">
+
+                    <LinearLayout
+                        android:id="@+id/playerOneList_linearlayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </ScrollView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/coin_imageview"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/coinpile"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/history_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/historyBackground"
+        android:elevation="3dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        layout="@layout/fragment_calculator"
+        android:visibility="invisible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

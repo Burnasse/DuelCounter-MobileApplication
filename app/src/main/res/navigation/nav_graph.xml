@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainMenuFragment">
+
+    <fragment
+        android:id="@+id/MainMenuFragment"
+        android:name="com.tlapp.duelcounter.MainMenuFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_mainmenu">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/MainAppFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit" />
+        <action
+            android:id="@+id/action_MainMenuFragment_to_onePlayerMainAppFragment"
+            app:destination="@id/onePlayerMainAppFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/MainAppFragment"
+        android:name="com.tlapp.duelcounter.MainAppFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_twoplayer_mainapp">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/MainMenuFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit" />
+        <argument
+            android:name="lifePoint"
+            app:argType="integer"
+            android:defaultValue="8000" />
+    </fragment>
+    <fragment
+        android:id="@+id/onePlayerMainAppFragment"
+        android:name="com.tlapp.duelcounter.OnePlayerMainAppFragment"
+        android:label="fragment_oneplayer_mainapp"
+        tools:layout="@layout/fragment_oneplayer_mainapp" >
+        <action
+            android:id="@+id/action_onePlayerMainAppFragment_to_MainMenuFragment"
+            app:destination="@id/MainMenuFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit" />
+        <argument
+            android:name="lifePoint"
+            app:argType="integer"
+            android:defaultValue="8000" />
+    </fragment>
+</navigation>
