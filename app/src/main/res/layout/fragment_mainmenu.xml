@@ -18,10 +18,28 @@
         android:elevation="3dp">
 
         <ImageView
-            android:id="@+id/slideBackground"
+            android:id="@+id/topSlide_imageview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop" />
+
+    </com.github.florent37.diagonallayout.DiagonalLayout>
+
+    <com.github.florent37.diagonallayout.DiagonalLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:diagonal_angle="15"
+        app:diagonal_direction="right"
+        app:diagonal_position="top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline2"
+        android:elevation="3dp">
+
+        <ImageView
+            android:id="@+id/bottomSlide_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="matrix"/>
 
     </com.github.florent37.diagonallayout.DiagonalLayout>
 

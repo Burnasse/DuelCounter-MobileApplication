@@ -11,7 +11,6 @@ import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_mainmenu.*
-import kotlinx.android.synthetic.main.slide_layout.*
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -28,11 +27,33 @@ class MainMenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val layout = slideBackground
+        val topLayout = topSlide_imageview
+        val bottomLayout = bottomSlide_imageview
 
         Glide.with(this).load(R.drawable.yugi).into(object : CustomTarget<Drawable>() {
             override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {
-                layout.setImageDrawable(resource)
+                topLayout.setImageDrawable(resource)
+            }
+
+            override fun onLoadCleared(placeholder: Drawable?) {}
+        })
+
+        Glide.with(this).load(R.drawable.magician2).into(object : CustomTarget<Drawable>() {
+            override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {
+                bottomLayout.setImageDrawable(resource)
+                val matrix = bottomLayout.imageMatrix
+                val scale: Float
+                val viewWidth = bottomLayout.width - bottomLayout.paddingLeft - bottomLayout.paddingRight
+                val viewHeight = bottomLayout.height - bottomLayout.paddingTop - bottomLayout.paddingBottom
+                val drawableWidth = bottomLayout.drawable.intrinsicWidth
+                val drawableHeight = bottomLayout.drawable.intrinsicHeight
+                scale = if (drawableWidth * viewHeight > drawableHeight * viewWidth) {
+                    viewHeight.toFloat() / drawableHeight.toFloat()
+                } else {
+                    viewWidth.toFloat() / drawableWidth.toFloat()
+                }
+                matrix.setScale(scale, scale)
+                bottomLayout.imageMatrix = matrix
             }
 
             override fun onLoadCleared(placeholder: Drawable?) {}
