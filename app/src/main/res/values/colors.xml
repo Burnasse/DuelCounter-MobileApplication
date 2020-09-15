@@ -3,6 +3,9 @@
     <color name="colorPrimary">#B5B5B5</color>
     <color name="colorPrimaryDark">#3E3E3E</color>
     <color name="historyBackground">#3686C6</color>
-    <color name="screenBackground">#076FC3</color>
+    <color name="screenBackground">#3A3A3A</color>
     <color name="buttonBackground">#F5FAFF</color>
+    <color name="upperSlideColor">#6C6C6C</color>
+    <color name="downSlideColor">#F6AA3A</color>
+    <color name="test">#8951EC</color>
 </resources>

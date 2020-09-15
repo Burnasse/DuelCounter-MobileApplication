@@ -14,7 +14,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.tlapp.duelcounter.extensions.*
 import com.tlapp.duelcounter.list.HistoryView
-import com.tlapp.duelcounter.listener.GestureListener
+import com.tlapp.duelcounter.listener.LifeGestureListener
 import com.tlapp.duelcounter.listener.PreviewTextWatcher
 import kotlinx.android.synthetic.main.fragment_calculator.*
 import kotlinx.android.synthetic.main.fragment_oneplayer_mainapp.*
@@ -31,8 +31,6 @@ class OnePlayerMainAppFragment : Fragment() {
 
     private var isTimerOn = false
     private var history = ArrayList<String>()
-
-    private var playerOneDefaultLife = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -55,7 +53,7 @@ class OnePlayerMainAppFragment : Fragment() {
             activity?.let { CalculatorFragment(counterView, it) }!!
         calculatorFragment.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<TextView>(R.id.playerOne_textview).text = playerOneDefaultLife.toString()
+        view.findViewById<TextView>(R.id.playerOne_textview).text = args.lifePoint.toString()
 
         val upRelativeLayout = view.findViewById<LinearLayout>(R.id.playerOneList_linearlayout)
 
@@ -138,7 +136,7 @@ class OnePlayerMainAppFragment : Fragment() {
 
         val gestureDetectorPlayerOne = GestureDetector(
             context,
-            GestureListener(
+            LifeGestureListener(
                 lifePoint = playerOne_textview,
                 preview = lifePlayerOnePreview_textview,
                 playerText = playerOne_edittext,

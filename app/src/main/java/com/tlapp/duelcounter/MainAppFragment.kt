@@ -16,7 +16,7 @@ import com.tlapp.duelcounter.extensions.circularHide
 import com.tlapp.duelcounter.extensions.circularReveal
 import com.tlapp.duelcounter.extensions.switchView
 import com.tlapp.duelcounter.list.HistoryView
-import com.tlapp.duelcounter.listener.GestureListener
+import com.tlapp.duelcounter.listener.LifeGestureListener
 import com.tlapp.duelcounter.listener.PreviewTextWatcher
 import kotlinx.android.synthetic.main.fragment_calculator.*
 import kotlinx.android.synthetic.main.fragment_twoplayer_mainapp.*
@@ -203,7 +203,7 @@ class MainAppFragment : Fragment() {
 
         val gestureDetectorPlayerOne = GestureDetector(
             context,
-            GestureListener(
+            LifeGestureListener(
                 lifePoint = playerOne_textview,
                 preview = lifePlayerOnePreview_textview,
                 playerText = playerOne_edittext,
@@ -213,7 +213,7 @@ class MainAppFragment : Fragment() {
         )
         val gestureDetectorPlayerTwo = GestureDetector(
             context,
-            GestureListener(
+            LifeGestureListener(
                 lifePoint = playerTwo_textview,
                 preview = lifePlayerTwoPreview_textview,
                 playerText = playerTwo_edittext,

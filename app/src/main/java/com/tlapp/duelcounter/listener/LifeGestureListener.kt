@@ -10,11 +10,11 @@ import com.tlapp.duelcounter.R
 import com.tlapp.duelcounter.extensions.countDownAnimation
 import com.tlapp.duelcounter.list.HistoryView
 
-class GestureListener(private val lifePoint: TextView,
-                      private val preview: TextView,
-                      private val historyView: HistoryView,
-                      private val playerText: EditText,
-                      private val activity: Activity) : GestureDetector.SimpleOnGestureListener() {
+class LifeGestureListener(private val lifePoint: TextView,
+                          private val preview: TextView,
+                          private val historyView: HistoryView,
+                          private val playerText: EditText,
+                          private val activity: Activity) : GestureDetector.SimpleOnGestureListener() {
 
     private var currentPreviewValue = preview.text.toString().toInt()
 
