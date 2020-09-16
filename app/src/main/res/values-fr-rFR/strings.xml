@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="timer_switch_text" translatable="true">Chrono</string>
     <string name="fourPlayer_button_text" translatable="true">4 joueurs</string>
     <string name="twoPlayer_button_text" translatable="true">2  joueurs</string>
     <string name="singlePlayer_button_text" translatable="true">1 joueur</string>
@@ -12,4 +11,16 @@
     <string name="speed_duel">Speed duel</string>
     <string name="loose_text">perd</string>
     <string name="gain_text">gagne</string>
+    <string name="increment_counter">augmenter le compteur</string>
+    <string name="decrement_counter">diminuer le compteur</string>
+    <string name="delete_counter">supprimer le compteur</string>
+    <string name="apply">Appliquer</string>
+    <string name="back">Retour</string>
+    <string name="timer">Chrono</string>
+    <string name="reset">Réinitialiser</string>
+    <string name="toss_coin">Jeter une pièce</string>
+    <string name="history">Historique</string>
+    <string name="edit">Editer</string>
+    <string name="add_counter">Ajouter un compteur</string>
+    <string name="coin">Pièce</string>
 </resources>

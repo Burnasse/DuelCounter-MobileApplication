@@ -73,7 +73,8 @@
                         android:layout_alignParentBottom="true"
                         android:layout_margin="10dp"
                         android:background="@drawable/circle_button"
-                        android:src="@drawable/ic_edit" />
+                        app:srcCompat="@drawable/ic_edit"
+                        android:contentDescription="@string/edit" />
 
                     <ImageButton
                         android:id="@+id/addCounterOne_button"
@@ -83,7 +84,8 @@
                         android:layout_margin="10dp"
                         android:layout_toStartOf="@id/playerOneCalcul_button"
                         android:background="@drawable/circle_button"
-                        android:src="@drawable/ic_add_counter" />
+                        app:srcCompat="@drawable/ic_add_counter"
+                        android:contentDescription="@string/add_counter" />
 
                     <ScrollView
                         android:layout_width="wrap_content"
@@ -113,8 +115,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="20dp"
                         android:background="@drawable/circle_button"
-                        android:src="@drawable/ic_back"
-                        android:text="@string/previous" />
+                        app:srcCompat="@drawable/ic_back"
+                        android:text="@string/previous"
+                        android:contentDescription="@string/back" />
 
                     <ImageButton
                         android:id="@+id/timer_imagebutton"
@@ -123,8 +126,8 @@
                         android:layout_centerInParent="true"
                         android:layout_toEndOf="@id/button_second"
                         android:background="@drawable/circle_button"
-                        android:contentDescription="Timer"
-                        android:src="@drawable/ic_timer_off" />
+                        android:contentDescription="@string/timer"
+                        app:srcCompat="@drawable/ic_timer_off" />
 
                     <Chronometer
                         android:id="@+id/chronometer_view"
@@ -142,8 +145,8 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@id/chronometer_view"
                         android:background="@drawable/circle_button"
-                        android:contentDescription="Reset"
-                        android:src="@drawable/ic_reset" />
+                        android:contentDescription="@string/reset"
+                        app:srcCompat="@drawable/ic_reset" />
 
                     <ImageButton
                         android:id="@+id/tosscoin_imagebutton"
@@ -153,16 +156,18 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@id/reset_imagebutton"
                         android:background="@drawable/circle_button"
-                        android:src="@drawable/ic_coinflip" />
+                        app:srcCompat="@drawable/ic_coinflip"
+                        android:contentDescription="@string/toss_coin" />
 
                     <ImageButton
                         android:id="@+id/history_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
-                        android:src="@drawable/ic_history"
+                        app:srcCompat="@drawable/ic_history"
                         android:background="@drawable/circle_button"
-                        android:layout_toEndOf="@id/tosscoin_imagebutton"/>
+                        android:layout_toEndOf="@id/tosscoin_imagebutton"
+                        android:contentDescription="@string/history" />
 
                 </RelativeLayout>
 
@@ -213,7 +218,8 @@
                         android:layout_alignParentBottom="true"
                         android:layout_margin="10dp"
                         android:background="@drawable/circle_button"
-                        android:src="@drawable/ic_edit" />
+                        app:srcCompat="@drawable/ic_edit"
+                        android:contentDescription="@string/edit" />
 
                     <EditText
                         android:id="@+id/playerTwo_edittext"
@@ -239,7 +245,8 @@
                         android:layout_margin="10dp"
                         android:layout_toEndOf="@id/playerTwoCalcul_button"
                         android:background="@drawable/circle_button"
-                        android:src="@drawable/ic_add_counter" />
+                        app:srcCompat="@drawable/ic_add_counter"
+                        android:contentDescription="@string/add_counter" />
 
                     <ScrollView
                         android:layout_width="wrap_content"
@@ -267,7 +274,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/coin" />
 
     <ListView
         android:id="@+id/history_listview"

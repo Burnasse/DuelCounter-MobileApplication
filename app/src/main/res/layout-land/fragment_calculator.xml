@@ -165,7 +165,7 @@
             android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="back" />
+            android:text="@string/back" />
 
         <Button
             android:id="@+id/apply_button"
@@ -173,7 +173,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/back_button"
             android:layout_marginTop="20dp"
-            android:text="Apply" />
+            android:text="@string/apply" />
     </RelativeLayout>
 
     <TextView

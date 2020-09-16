@@ -120,7 +120,7 @@
         android:id="@+id/apply_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Apply"
+        android:text="@string/apply"
         app:layout_constraintBottom_toTopOf="@+id/mult_button"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -164,7 +164,7 @@
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="back"
+        android:text="@string/back"
         app:layout_constraintBottom_toTopOf="@+id/add_button"
         app:layout_constraintEnd_toEndOf="parent" />
 

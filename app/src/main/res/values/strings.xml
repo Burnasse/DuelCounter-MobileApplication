@@ -9,7 +9,6 @@
     <string name="singlePlayer_button_text">Single player</string>
     <string name="twoPlayer_button_text">Two players</string>
     <string name="fourPlayer_button_text">Four players</string>
-    <string name="timer_switch_text">Timer</string>
     <string name="placeholder" translatable="false">placeholder</string>
     <string name="player_one">Player one</string>
     <string name="player_two">Player two</string>
@@ -18,4 +17,16 @@
     <string name="speed_duel">Speed duel</string>
     <string name="loose_text">loose</string>
     <string name="gain_text">gain</string>
+    <string name="increment_counter">increment counter</string>
+    <string name="decrement_counter">decrement counter</string>
+    <string name="delete_counter">delete counter</string>
+    <string name="apply">Apply</string>
+    <string name="back">Back</string>
+    <string name="timer">Timer</string>
+    <string name="reset">Reset</string>
+    <string name="toss_coin">toss coin</string>
+    <string name="history">history</string>
+    <string name="edit">edit</string>
+    <string name="add_counter">add counter</string>
+    <string name="coin">coin</string>
 </resources>
