@@ -9,28 +9,30 @@
         android:id="@+id/counterName_edittext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="@string/counter"
+        android:cursorVisible="false"
+        android:hint="@string/counter"
         android:imeOptions="actionDone"
         android:inputType="textPersonName"
         android:text="@string/counter"
-        android:cursorVisible="false"
+        android:textColor="@android:color/white"
         android:textSize="12sp"
-        android:autofillHints="@string/counter"
-        android:hint="@string/counter"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        app:layout_constraintStart_toEndOf="@id/counterName_edittext"
         android:id="@+id/counter_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:paddingStart="10dp"
         android:paddingEnd="15dp"
         android:text="0"
-        android:textSize="12sp" />
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/counterName_edittext"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         app:layout_constraintStart_toEndOf="@id/counter_textview"

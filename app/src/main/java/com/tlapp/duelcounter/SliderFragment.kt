@@ -21,7 +21,7 @@ class SliderFragment(private val position: Int = 0) : Fragment() {
     private val navigationSpeedArray = listOf(
         MainMenuFragmentDirections.actionMainMenuFragmentToOnePlayerMainAppFragment(4000),
         MainMenuFragmentDirections.actionFirstFragmentToSecondFragment(4000),
-        MainMenuFragmentDirections.actionFirstFragmentToSecondFragment(16000)
+        MainMenuFragmentDirections.actionFirstFragmentToSecondFragment(8000)
     )
 
     override fun onCreateView(
